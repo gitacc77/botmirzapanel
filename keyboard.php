@@ -165,7 +165,7 @@ $step_payment = [
     ];
     if($PaySettingcard == "oncard"){
         $step_payment['inline_keyboard'][] = [
-            ['text' => "💳 کارت به کارت" ,'callback_data' => "cart_to_offline"],
+            ['text' => "💳 درگاه پرداخت" ,'callback_data' => "cart_to_offline"],
     ];
     }
    if($PaySettingnow == "onnowpayment"){
