@@ -80,7 +80,7 @@ sudo apt-get install -y php-ssh2
 sudo apt-get install -y libssh2-1-dev libssh2-1
 sudo systemctl restart apache2.service
 wait
-git clone https://github.com/mahdiMGF2/botmirzapanel.git /var/www/html/mirzabotconfig
+git clone https://github.com/gitacc77/botmirzapanel.git /var/www/html/mirzabotconfig
 sudo chown -R www-data:www-data /var/www/html/mirzabotconfig/
 sudo chmod -R 755 /var/www/html/mirzabotconfig/
 echo -e "\n\033[33mmirza config and script have been installed successfully\033[0m"
