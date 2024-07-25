@@ -21,7 +21,7 @@ echo -e "\n\e[92mUpdating Bot ...\033[0m\n"
 sleep 2
 mv /var/www/html/mirzabotconfig/config.php /root/
 rm -r /var/www/html/mirzabotconfig
-git clone https://github.com/mahdiMGF2/botmirzapanel.git /var/www/html/mirzabotconfig
+git clone https://github.com/gitacc77/botmirzapanel.git /var/www/html/mirzabotconfig
 sudo chown -R www-data:www-data /var/www/html/mirzabotconfig/
 sudo chmod -R 755 /var/www/html/mirzabotconfig/
 mv /root/config.php /var/www/html/mirzabotconfig/
