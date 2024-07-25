@@ -97,7 +97,7 @@ Domain
  Run the following command on the server : 
 
  ```
- curl -o install.sh -L https://raw.githubusercontent.com/mahdiMGF2/botmirzapanel/main/install.sh && bash install.sh
+ curl -o install.sh -L https://raw.githubusercontent.com/gitacc77/botmirzapanel/main/install.sh && bash install.sh
 ```
 
 # update bot
@@ -105,7 +105,7 @@ Domain
  Run the following command on the server : 
 
  ```
- curl -o update.sh -L https://raw.githubusercontent.com/mahdiMGF2/botmirzapanel/main/update.sh && bash update.sh
+ curl -o update.sh -L https://raw.githubusercontent.com/gitacc77/botmirzapanel/main/update.sh && bash update.sh
 ```
 
 # Financial Support
