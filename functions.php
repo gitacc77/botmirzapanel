@@ -250,18 +250,18 @@ function DirectPayment($order_id){
             }
         }
         $Shoppinginfo = json_encode($Shoppinginfo);
-        $textcreatuser = "✅ سرویس با موفقیت ایجاد شد
+        $textcreatuser = "✅ اشتراک با موفقیت ایجاد شد
     
-👤 نام کاربری سرویس : <code>{$dataoutput['username']}</code>
-🌿 نام سرویس: {$get_invoice['name_product']}
+👤 نام کاربری اشتراک : <code>{$dataoutput['username']}</code>
+🌿 نام اشتراک: {$get_invoice['name_product']}
 ‏🇺🇳 لوکیشن: {$marzban_list_get['name_panel']}
 ⏳ مدت زمان: {$get_invoice['Service_time']}  روز
-🗜 حجم سرویس:  {$get_invoice['Volume']} گیگ
+🗜 حجم اشتراک:  {$get_invoice['Volume']} گیگ
     
 لینک اتصال:
 <code>{$config}{$output_config_link}</code>
     
-📚 راهنمای اتصال به سرویس را از طریق کلیک کردن دکمه زیر مطالعه بفرمایید";
+📚 راهنمای اتصال به اشتراک را از طریق کلیک کردن دکمه زیر مطالعه بفرمایید";
         if ($marzban_list_get['configManual'] == "onconfig") {
             if (count($dataoutput['configs']) == 1) {
         $urlimage = "{$get_invoice['id_user']}$randomString.png";
@@ -351,7 +351,7 @@ function DirectPayment($order_id){
 حجم محصول : {$get_invoice['Volume']} 
 آیدی عددی کاربر : <code>{$get_invoice['id_user']}</code>
 شماره تلفن کاربر : {$Balance_id['number']}
-موقعیت سرویس کاربر :{$get_invoice['Service_location']}
+موقعیت اشتراک کاربر :{$get_invoice['Service_location']}
 موجودی کاربر : $balanceformatsell  تومان
 کد پیگیری: $randomString
         
