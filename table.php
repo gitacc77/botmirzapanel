@@ -601,7 +601,7 @@ try {
 
 6️⃣ چطور باید از این فیلترشکن استفاده کنم؟
 
-✅ برای آموزش استفاده از برنامه، روی دکمه «📚 آموزش» بزنید.
+✅ برای آموزش استفاده از برنامه، روی دکمه «🎬 آموزش» بزنید.
 
 7️⃣ فیلترشکن وصل نمیشه، چیکار کنم؟
 
@@ -629,39 +629,39 @@ try {
             echo "table textbot".mysqli_error($connect);
         }
         $connect->query("INSERT INTO textbot (id_text,text) VALUES ('text_start','سلام خوش آمدید') ");
-        $connect->query("INSERT INTO textbot (id_text,text) VALUES ('text_usertest','🔑 اکانت تست')");
-        $connect->query("INSERT INTO textbot (id_text,text) VALUES ('text_Purchased_services','🛍 سرویس های من')");
-        $connect->query("INSERT INTO textbot (id_text,text) VALUES ('text_support','☎️ پشتیبانی')");
-        $connect->query("INSERT INTO textbot (id_text,text) VALUES ('text_help','📚 آموزش')");
-        $connect->query("INSERT INTO textbot (id_text,text) VALUES ('text_bot_off','❌ ربات خاموش است، لطفا دقایقی دیگر مراجعه کنید')");
+        $connect->query("INSERT INTO textbot (id_text,text) VALUES ('text_usertest','🎁 تست رایگان')");
+        $connect->query("INSERT INTO textbot (id_text,text) VALUES ('text_Purchased_services','🍇 سرویس های من')");
+        $connect->query("INSERT INTO textbot (id_text,text) VALUES ('text_support','👩🏻‍💻 پشتیبانی آنلاین')");
+        $connect->query("INSERT INTO textbot (id_text,text) VALUES ('text_help','🎬 آموزش')");
+        $connect->query("INSERT INTO textbot (id_text,text) VALUES ('text_bot_off','❌ ربات در حال تعمیر است، لطفا دقایقی دیگر مراجعه کنید...')");
         $connect->query("INSERT INTO textbot (id_text,text) VALUES ('text_roll','$text_roll')");
         $connect->query("INSERT INTO textbot (id_text,text) VALUES ('text_fq','❓ سوالات متداول')");
         $connect->query("INSERT INTO textbot (id_text,text) VALUES ('text_dec_fq','$text_dec_fq')");
-        $connect->query("INSERT INTO textbot (id_text,text) VALUES ('text_account','👨🏻‍💻 مشخصات کاربری')");
-        $connect->query("INSERT INTO textbot (id_text,text) VALUES ('text_sell','🔐 خرید اشتراک')");
-        $connect->query("INSERT INTO textbot (id_text,text) VALUES ('text_Add_Balance','💰 افزایش موجودی')");
+        $connect->query("INSERT INTO textbot (id_text,text) VALUES ('text_account','👤 پروفایل')");
+        $connect->query("INSERT INTO textbot (id_text,text) VALUES ('text_sell','🛍 خرید اشتراک')");
+        $connect->query("INSERT INTO textbot (id_text,text) VALUES ('text_Add_Balance','💵 شارژ حساب')");
         $connect->query("INSERT INTO textbot (id_text,text) VALUES ('text_channel','$text_channel')");
         $connect->query("INSERT INTO textbot (id_text,text) VALUES ('text_Discount','🎁 کد هدیه')");
-        $connect->query("INSERT INTO textbot (id_text,text) VALUES ('text_Tariff_list','💰 تعرفه اشتراک ها')");
+        $connect->query("INSERT INTO textbot (id_text,text) VALUES ('text_Tariff_list','🚀 پروکسی تلگرام')");
         $connect->query("INSERT INTO textbot (id_text,text) VALUES ('text_dec_Tariff_list','تنظیم نشده است')");
         $connect->query("INSERT INTO textbot (id_text,text) VALUES ('text_Account_op','🎛 حساب کاربری')");
     }
     else{
         $connect->query("INSERT IGNORE INTO textbot (id_text,text) VALUES ('text_start','سلام خوش آمدید')");
-        $connect->query("INSERT IGNORE INTO textbot (id_text,text) VALUES ('text_usertest','🔑 اکانت تست')");
-        $connect->query("INSERT IGNORE INTO textbot (id_text,text) VALUES ('text_Purchased_services','🛍 سرویس های من')");
-        $connect->query("INSERT IGNORE INTO textbot (id_text,text) VALUES ('text_support','☎️ پشتیبانی')");
-        $connect->query("INSERT IGNORE INTO textbot (id_text,text) VALUES ('text_help','📚 آموزش')");
-        $connect->query("INSERT IGNORE INTO textbot (id_text,text) VALUES ('text_bot_off','❌ ربات خاموش است، لطفا دقایقی دیگر مراجعه کنید')");
+        $connect->query("INSERT IGNORE INTO textbot (id_text,text) VALUES ('text_usertest','🎁 تست رایگان')");
+        $connect->query("INSERT IGNORE INTO textbot (id_text,text) VALUES ('text_Purchased_services','🍇 سرویس های من')");
+        $connect->query("INSERT IGNORE INTO textbot (id_text,text) VALUES ('text_support','👩🏻‍💻 پشتیبانی آنلاین')");
+        $connect->query("INSERT IGNORE INTO textbot (id_text,text) VALUES ('text_help','🎬 آموزش')");
+        $connect->query("INSERT IGNORE INTO textbot (id_text,text) VALUES ('text_bot_off','❌ ربات در حال تعمیر است، لطفا دقایقی دیگر مراجعه کنید...')");
         $connect->query("INSERT IGNORE INTO textbot (id_text,text) VALUES ('text_roll','$text_roll')");
         $connect->query("INSERT IGNORE INTO textbot (id_text,text) VALUES ('text_fq','❓ سوالات متداول')");
         $connect->query("INSERT IGNORE INTO textbot (id_text,text) VALUES ('text_dec_fq','$text_dec_fq')");
-        $connect->query("INSERT IGNORE INTO textbot (id_text,text) VALUES ('text_account','👨🏻‍💻 مشخصات کاربری')");
-        $connect->query("INSERT IGNORE INTO textbot (id_text,text) VALUES ('text_sell','🔐 خرید اشتراک')");
-        $connect->query("INSERT IGNORE INTO textbot (id_text,text) VALUES ('text_Add_Balance','💰 افزایش موجودی')");
+        $connect->query("INSERT IGNORE INTO textbot (id_text,text) VALUES ('text_account','👤 پروفایل')");
+        $connect->query("INSERT IGNORE INTO textbot (id_text,text) VALUES ('text_sell','🛍 خرید اشتراک')");
+        $connect->query("INSERT IGNORE INTO textbot (id_text,text) VALUES ('text_Add_Balance','💵 شارژ حساب')");
         $connect->query("INSERT IGNORE INTO textbot (id_text,text) VALUES ('text_channel','$text_channel')");
         $connect->query("INSERT IGNORE INTO textbot (id_text,text) VALUES ('text_Discount','🎁 کد هدیه')");
-        $connect->query("INSERT IGNORE INTO textbot (id_text,text) VALUES ('text_Tariff_list','💰 تعرفه اشتراک ها')");
+        $connect->query("INSERT IGNORE INTO textbot (id_text,text) VALUES ('text_Tariff_list','🚀 پروکسی تلگرام')");
         $connect->query("INSERT IGNORE INTO textbot (id_text,text) VALUES ('text_dec_Tariff_list','تنظیم نشده است')");
         $connect->query("INSERT IGNORE INTO textbot (id_text,text) VALUES ('text_Account_op','🎛 حساب کاربری')");
 
