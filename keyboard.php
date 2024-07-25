@@ -44,9 +44,9 @@ if ($table_exists) {
 $keyboard = [
     'keyboard' => [
         [['text' => $datatextbot['text_Purchased_services']], ['text' => $datatextbot['text_sell']]],
-        [['text' => $datatextbot['text_usertest']], ['text' => $datatextbot['text_account']], ['text' => $datatextbot['text_Add_Balance']]],
-        [['text' => $datatextbot['text_help']], ['text' => $datatextbot['text_support']]],
-        [['text' => "⛓ زیر مجموعه ها"], ['text' => $datatextbot['text_Tariff_list']]],
+        [['text' => $datatextbot['text_account']], ['text' => $datatextbot['text_help']], ['text' => $datatextbot['text_Add_Balance']]],
+        [['text' => $datatextbot['text_Tariff_list']], ['text' => $datatextbot['text_usertest']]],
+        [['text' => "⛓ زیر مجموعه ها"], ['text' => $datatextbot['text_support']]],
     ],
     'resize_keyboard' => true
 ];
