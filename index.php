@@ -567,15 +567,15 @@ if (preg_match('/product_(\w+)/', $datain, $dataget)) {
             ]
         ]
     ]);
-    $textinfo = "وضعیت سرویس : $status_var
-نام کاربری سرویس : {$DataUserOut['username']}
+    $textinfo = "وضعیت اشتراک : $status_var
+نام کاربری اشتراک : {$DataUserOut['username']}
 لوکیشن :{$nameloc['Service_location']}
-کد سرویس:{$nameloc['id_invoice']}
+کد اشتراک:{$nameloc['id_invoice']}
     
 🟢 اخرین زمان اتصال شما : $lastonline
     
 📥 حجم مصرفی : $usedTrafficGb
-♾ حجم سرویس : $LastTraffic
+♾ حجم اشتراک : $LastTraffic
 
 📅 فعال تا تاریخ : $expirationDate ($day)
     
@@ -689,7 +689,7 @@ if (preg_match('/subscriptionurl_(\w+)/', $datain, $dataget)) {
 حجم تمدید : {$product['Volume_constraint']} گیگ
             
             
-✅ برای تایید و تمدید سرویس روی دکمه زیر کلیک کنید
+✅ برای تایید و تمدید اشتراک روی دکمه زیر کلیک کنید
             
 ❌ برای تمدید باید کیف پول خود را شارژ کنید.";
     Editmessagetext($from_id, $message_id, $textextend, $keyboardextend);
@@ -757,7 +757,7 @@ if (preg_match('/subscriptionurl_(\w+)/', $datain, $dataget)) {
     $priceproductformat = number_format($product['price_product']);
     $balanceformatsell = number_format(select("user", "Balance", "id", $from_id, "select")['Balance']);
     sendmessage($from_id, $textbotlang['users']['extend']['thanks'], $keyboardextendfnished, 'HTML');
-    $text_report = "⭕️ یک کاربر سرویس خود را تمدید کرد.
+    $text_report = "⭕️ یک کاربر اشتراک خود را تمدید کرد.
             
     اطلاعات کاربر : 
             
@@ -767,7 +767,7 @@ if (preg_match('/subscriptionurl_(\w+)/', $datain, $dataget)) {
 💰 مبلغ تمدید $priceproductformat تومان
 👤 نام کاربری مشتری در پنل  : $usernamepanel
 موجودی کاربر : $balanceformatsell تومان
-لوکیشن سرویس کاربر : {$nameloc['Service_location']}";
+لوکیشن اشتراک کاربر : {$nameloc['Service_location']}";
     if (isset($setting['Channel_Report']) &&strlen($setting['Channel_Report']) > 0) {
         sendmessage($setting['Channel_Report'], $text_report, null, 'HTML');
     }
@@ -895,7 +895,7 @@ if (isset($setting['Channel_Report']) &&strlen($setting['Channel_Report']) > 0) 
     $confirmremove = json_encode([
         'inline_keyboard' => [
             [
-                ['text' => "✅  درخواست حذف سرویس را دارم", 'callback_data' => "confirmremoveservices-$username"],
+                ['text' => "✅  درخواست حذف اشتراک را دارم", 'callback_data' => "confirmremoveservices-$username"],
             ],
         ]
     ]);
@@ -940,21 +940,21 @@ if (isset($setting['Channel_Report']) &&strlen($setting['Channel_Report']) > 0) 
     #-----------------------------#
     $textinfoadmin = "سلام ادمین 👋
             
-📌 یک درخواست حذف سرویس  توسط کاربر برای شما ارسال شده است. لطفا بررسی کرده و در صورت درست بودن و موافقت تایید کنید. 
+📌 یک درخواست حذف اشتراک  توسط کاربر برای شما ارسال شده است. لطفا بررسی کرده و در صورت درست بودن و موافقت تایید کنید. 
 ⚠️ نکات تایید :
 1 -  مبلغ قابل بازگشت به کاربر توسط شما تعیین خواهد شد.
             
             
-📊 اطلاعات سرویس کاربر :
+📊 اطلاعات اشتراک کاربر :
 آیدی عددی کاربر : $from_id
 نام کاربری کاربر : @$username
 نام کاربری کانفیگ : {$nameloc['username']}
-وضعیت سرویس : $status_var
+وضعیت اشتراک : $status_var
 لوکیشن : {$nameloc['Service_location']}
-کد سرویس:{$nameloc['id_invoice']}
+کد اشتراک:{$nameloc['id_invoice']}
     
 📥 حجم مصرفی : $usedTrafficGb
-♾ حجم سرویس : $LastTraffic
+♾ حجم اشتراک : $LastTraffic
 🪫 حجم باقی مانده : $RemainingVolume
 📅 فعال تا تاریخ : $expirationDate ($day)";
     $confirmremoveadmin = json_encode([
@@ -1085,19 +1085,19 @@ $Shoppinginfo = json_encode([
             ]
         ]
     ]);
-$textcreatuser = "✅ سرویس با موفقیت ایجاد شد
+$textcreatuser = "✅ اشتراک با موفقیت ایجاد شد
     
-👤 نام کاربری سرویس : <code>$username_ac</code>
-🌿 نام سرویس: تست
+👤 نام کاربری اشتراک : <code>$username_ac</code>
+🌿 نام اشتراک: تست
 ‏🇺🇳 لوکیشن: {$marzban_list_get['name_panel']}
 ⏳ مدت زمان: {$setting['time_usertest']}  ساعت
-🗜 حجم سرویس:  {$setting['val_usertest']} مگابایت
+🗜 حجم اشتراک:  {$setting['val_usertest']} مگابایت
     
 لینک اتصال:
 <code>$output_config_link</code>
 <code>$text_config</code>
     
-📚 راهنمای اتصال به سرویس را از طریق کلیک کردن دکمه زیر مطالعه بفرمایید";
+📚 راهنمای اتصال به اشتراک را از طریق کلیک کردن دکمه زیر مطالعه بفرمایید";
     if ($marzban_list_get['sublink'] == "onsublink") {
         $urlimage = "$from_id$randomString.png";
         $writer = new PngWriter();
@@ -1229,7 +1229,7 @@ if ($text == $datatextbot['text_account']) {
 👤 نام: $first_name
 🕴🏻 شناسه کاربری: <code>$from_id</code>
 💰 موجودی: $Balanceuser تومان
-🛍 تعداد سرویس های خریداری شده : $countorder
+🛍 تعداد اشتراک های خریداری شده : $countorder
 🤝 تعداد زیر مجموعه های شما : {$user['affiliatescount']} نفر
     
 📆 $dateacc → ⏰ $timeacc
@@ -1277,8 +1277,8 @@ if ($text == $datatextbot['text_sell'] || $datain == "buy") {
         ];
 
         $json_list_product_list = json_encode($product);
-        $textproduct = "🛍 برای خرید اشتراک سرویس مدنظر خود را انتخاب کنید
-لوکیشن سرویس  :{$location['name_panel']} ";
+        $textproduct = "🛍 برای خرید اشتراک اشتراک مدنظر خود را انتخاب کنید
+لوکیشن اشتراک  :{$location['name_panel']} ";
         sendmessage($from_id, $textproduct, $json_list_product_list, 'HTML');
         update("user", "Processing_value", $location['name_panel'], "id", $from_id);
     } else {
@@ -1357,7 +1357,7 @@ if ($text == $datatextbot['text_sell'] || $datain == "buy") {
     $textin = "
              📇 پیش فاکتور شما:
 👤 نام کاربری: <code>$username_ac</code>
-🔐 نام سرویس: {$info_product['name_product']}
+🔐 نام اشتراک: {$info_product['name_product']}
 📆 مدت اعتبار: {$info_product['Service_time']} روز
 💶 قیمت: {$info_product['price_product']}  تومان
 👥 حجم اکانت: {$info_product['Volume_constraint']} گیگ
@@ -1487,19 +1487,19 @@ if ($text == $datatextbot['text_sell'] || $datain == "buy") {
             ]
         ]
     ]);
-    $textcreatuser = "✅ سرویس با موفقیت ایجاد شد
+    $textcreatuser = "✅ اشتراک با موفقیت ایجاد شد
     
-👤 نام کاربری سرویس : <code>$username_ac</code>
-🌿 نام سرویس: {$info_product['name_product']}
+👤 نام کاربری اشتراک : <code>$username_ac</code>
+🌿 نام اشتراک: {$info_product['name_product']}
 ‏🇺🇳 لوکیشن: {$marzban_list_get['name_panel']}
 ⏳ مدت زمان: {$info_product['Service_time']}  روز
-🗜 حجم سرویس:  {$info_product['Volume_constraint']} گیگ
+🗜 حجم اشتراک:  {$info_product['Volume_constraint']} گیگ
     
 لینک اتصال:
 $text_config
 $link_config
     
-📚 راهنمای اتصال به سرویس را از طریق کلیک کردن دکمه زیر مطالعه بفرمایید";
+📚 راهنمای اتصال به اشتراک را از طریق کلیک کردن دکمه زیر مطالعه بفرمایید";
     if ($marzban_list_get['sublink'] == "onsublink") {
         $urlimage = "$from_id$randomString.png";
         $writer = new PngWriter();
@@ -1535,7 +1535,7 @@ $link_config
     حجم محصول : {$info_product['Volume_constraint']} 
     آیدی عددی کاربر : <code>$from_id</code>
     شماره تلفن کاربر : {$user['number']}
-    موقعیت سرویس کاربر :{$user['Processing_value']}
+    موقعیت اشتراک کاربر :{$user['Processing_value']}
     موجودی کاربر : {$user['Balance']} تومان
     
         اطلاعات کاربر 👇👇
@@ -1590,7 +1590,7 @@ $link_config
     $textin = "
              📇 پیش فاکتور شما:
 👤 نام کاربری: <code>{$user['Processing_value_tow']}</code>
-🔐 نام سرویس: {$info_product['name_product']}
+🔐 نام اشتراک: {$info_product['name_product']}
 📆 مدت اعتبار: {$info_product['Service_time']} روز
 💶 قیمت: {$info_product['price_product']}  تومان
 👥 حجم اکانت: {$info_product['Volume_constraint']} گیگ
@@ -1599,7 +1599,7 @@ $link_config
 💰 سفارش شما آماده پرداخت است.  ";
     $paymentDiscount = json_encode([
         'inline_keyboard' => [
-            [['text' => "💰 پرداخت و دریافت سرویس", 'callback_data' => "confirmandgetserviceDiscount"]],
+            [['text' => "💰 پرداخت و دریافت اشتراک", 'callback_data' => "confirmandgetserviceDiscount"]],
             [['text' => "🏠 بازگشت به منوی اصلی", 'callback_data' => "backuser"]]
         ]
     ]);
@@ -1623,7 +1623,7 @@ if ($text == $datatextbot['text_Add_Balance']) {
 } elseif ($user['step'] == "getprice") {
     if (!is_numeric($text))
         return sendmessage($from_id, $textbotlang['users']['Balance']['errorprice'], null, 'HTML');
-    if ($text > 10000000 or $text < 20000)
+    if ($text > 10000000 or $text < 10000)
         return sendmessage($from_id, $textbotlang['users']['Balance']['errorpricelimit'], null, 'HTML');
     update("user", "Processing_value", $text, "id", $from_id);
     sendmessage($from_id, $textbotlang['users']['Balance']['selectPatment'], $step_payment, 'HTML');
@@ -2471,7 +2471,7 @@ if ($text == "📝 تنظیم متن ربات") {
     sendmessage($from_id, $textbotlang['Admin']['ManageUser']['SaveText'], $textbot, 'HTML');
     update("textbot", "text", $text, "id_text", "text_start");
     step('home', $from_id);
-} elseif ($text == "دکمه سرویس خریداری شده") {
+} elseif ($text == "دکمه اشتراک خریداری شده") {
     $textstart = $textbotlang['Admin']['ManageUser']['ChangeTextGet'] . $datatextbot['text_Purchased_services'];
     sendmessage($from_id, $textstart, $backadmin, 'HTML');
     step('changetextinfo', $from_id);
@@ -3222,8 +3222,8 @@ if ($text == "زمان") {
     step('home', $from_id);
 }
 #-------------------------#
-if ($text == "⏳ زمان سرویس تست") {
-    sendmessage($from_id, "🕰 مدت زمان سرویس تست را ارسال کنید.
+if ($text == "⏳ زمان اشتراک تست") {
+    sendmessage($from_id, "🕰 مدت زمان اشتراک تست را ارسال کنید.
 زمان فعلی: {$setting['time_usertest']} ساعت
 ⚠️ زمان بر حسب ساعت است.", $backadmin, 'HTML');
     step('updatetime', $from_id);
@@ -3238,7 +3238,7 @@ if ($text == "⏳ زمان سرویس تست") {
 }
 #-------------------------#
 if ($text == "💾 حجم اکانت تست") {
-    sendmessage($from_id, "حجم سرویس تست را ارسال کنید.
+    sendmessage($from_id, "حجم اشتراک تست را ارسال کنید.
 حجم فعلی: {$setting['val_usertest']} مگابایت
 ⚠️ حجم بر حسب مگابایت است.", $backadmin, 'HTML');
     step('val_usertest', $from_id);
@@ -3513,11 +3513,11 @@ if ($text == "🛍 مشاهده سفارشات کاربر") {
 🛒 شماره سفارش  :  <code>{$OrderUser['id_invoice']}</code>
 🙍‍♂️ شناسه کاربر : <code>{$OrderUser['id_user']}</code>
 👤 نام کاربری اشتراک :  <code>{$OrderUser['username']}</code> 
-📍 لوکیشن سرویس :  {$OrderUser['Service_location']}
+📍 لوکیشن اشتراک :  {$OrderUser['Service_location']}
 🛍 نام محصول :  {$OrderUser['name_product']}
-💰 قیمت پرداختی سرویس : {$OrderUser['price_product']} تومان
-⚜️ حجم سرویس خریداری شده : {$OrderUser['Volume']}
-⏳ زمان سرویس خریداری شده : {$OrderUser['Service_time']} روزه
+💰 قیمت پرداختی اشتراک : {$OrderUser['price_product']} تومان
+⚜️ حجم اشتراک خریداری شده : {$OrderUser['Volume']}
+⏳ زمان اشتراک خریداری شده : {$OrderUser['Service_time']} روزه
 📆 تاریخ خرید : $datatime
                 ";
         sendmessage($from_id, $text_order, null, 'HTML');
@@ -3554,7 +3554,7 @@ if ($text == "🗑 حذف پروتکل") {
     $stmt->execute();
     step('home', $from_id);
 }
-if ($text == "❌ حذف سرویس کاربر") {
+if ($text == "❌ حذف اشتراک کاربر") {
     sendmessage($from_id, $textbotlang['Admin']['ManageUser']['RemoveService'], $backadmin, 'HTML');
     step('removeservice', $from_id);
 } elseif ($user['step'] == "removeservice") {
@@ -4333,7 +4333,7 @@ if ($text == "🌟 مبلغ هدیه استارت") {
         update("user", "Balance", $Balance_id_cancel_fee, "id", $nameloc['id_user']);
         sendmessage($nameloc['id_user'], "💰کاربر گرامی مبلغ $pricecancel تومان به موجودی شما اضافه گردید.", null, 'HTML');
     }
-    $text_report = "⭕️ یک ادمین سرویس کاربر که درخواست حذف داشت را تایید کرد
+    $text_report = "⭕️ یک ادمین اشتراک کاربر که درخواست حذف داشت را تایید کرد
             
             اطلاعات کاربر تایید کننده  : 
             
