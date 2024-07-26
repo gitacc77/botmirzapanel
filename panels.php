@@ -46,7 +46,7 @@ class ManagePanel{
             $Output['status'] = 'successful';
             $Output['username'] = $usernameC;
             $domain = explode(":", $Get_Data_Panel['linksubx']);
-            $Output['subscription_url'] = $domain[0].":".$domain[1].":2096/sub/{$subId}?name=$subId";
+            $Output['subscription_url'] = $domain[0].":".$domain[1]."/you-are-b3st/{$subId}?name=$subId";
             $Output['configs'] = [outputlunk($Output['subscription_url'])];
             }
         }
@@ -113,8 +113,8 @@ class ManagePanel{
                 'expire' => $UsernameData['expiryTime']/1000,
                 'online_at' => $status_user,
                 'used_traffic' => $UsernameData['up']+$UsernameData['down'],
-                'links' => [outputlunk($domain[0].":".$domain[1].":2096/sub/{$UsernameData2['subId']}?name={$UsernameData2['subId']}")],
-                'subscription_url' => $domain[0].":".$domain[1].":2096/sub/{$UsernameData2['subId']}?name={$UsernameData2['subId']}",
+                'links' => [outputlunk($domain[0].":".$domain[1]."/you-are-b3st/{$UsernameData2['subId']}?name={$UsernameData2['subId']}")],
+                'subscription_url' => $domain[0].":".$domain[1]."/you-are-b3st/{$UsernameData2['subId']}?name={$UsernameData2['subId']}",
                 );
             }
         }
@@ -179,8 +179,8 @@ class ManagePanel{
             $domain = explode(":", $Get_Data_Panel['linksubx']);
             $Output = array(
                 'status' => 'successful',
-                'configs' => outputlunk($domain[0].":".$domain[1].":2096/sub/{$subId}?name=$subId"),
-                'subscription_url' => $domain[0].":".$domain[1].":2096/sub/{$subId}?name=$subId",
+                'configs' => outputlunk($domain[0].":".$domain[1]."/you-are-b3st/{$subId}?name=$subId"),
+                'subscription_url' => $domain[0].":".$domain[1]."/you-are-b3st/{$subId}?name=$subId",
                 );
             }
         }
