@@ -250,7 +250,7 @@ function DirectPayment($order_id){
             }
         }
         $Shoppinginfo = json_encode($Shoppinginfo);
-        $textcreatuser = "✅ اشتراک با موفقیت ایجاد شد
+        $textcreatuser = "✅ اشتراک با موفقیت ایجاد شد.
     
 👤 نام کاربری اشتراک : <code>{$dataoutput['username']}</code>
 🌿 نام اشتراک: {$get_invoice['name_product']}
@@ -261,7 +261,7 @@ function DirectPayment($order_id){
 لینک اتصال:
 <code>{$config}{$output_config_link}</code>
     
-📚 راهنمای اتصال به اشتراک را از طریق کلیک کردن دکمه زیر مطالعه بفرمایید";
+🎬 راهنمای اتصال به اشتراک را از طریق دکمه زیر مشاهده کنید.";
         if ($marzban_list_get['configManual'] == "onconfig") {
             if (count($dataoutput['configs']) == 1) {
         $urlimage = "{$get_invoice['id_user']}$randomString.png";
