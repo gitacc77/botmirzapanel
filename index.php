@@ -2076,7 +2076,7 @@ if ($datain == "colselist") {
     deletemessage($from_id, $message_id);
     sendmessage($from_id, $textbotlang['users']['back'], $keyboard, 'HTML');
 }
-if ($text == "👥 زیر مجموعه گیری") {
+if ($text == "⛓ زیر مجموعه ها") {
     $affiliatesvalue = select("affiliates", "*", null, null, "select")['affiliatesstatus'];
     if ($affiliatesvalue == "offaffiliates") {
         sendmessage($from_id, $textbotlang['users']['affiliates']['offaffiliates'], $keyboard, 'HTML');
