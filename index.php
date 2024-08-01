@@ -236,7 +236,7 @@ if (!in_array($tch, ['member', 'creator', 'administrator']) && $channels['Channe
     return;
 }
 #-----------roll------------#
-if ($setting['roll_Status'] == "✅ تایید قانون روشن است" && $user['roll_Status'] == 0 && $text != "تایید موارد ✅" && !in_array($from_id, $admin_ids)) {
+if ($setting['roll_Status'] == "✅ تایید قانون روشن است" && $user['roll_Status'] == 0 && $text != "✅ تایید موارد" && !in_array($from_id, $admin_ids)) {
     sendmessage($from_id, $datatextbot['text_roll'], $confrimrolls, 'html');
     return;
 }
