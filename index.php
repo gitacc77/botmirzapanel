@@ -4130,7 +4130,7 @@ if ($text == "❌ حذف کد تخفیف") {
     sendmessage($from_id, $textbotlang['Admin']['Discount']['RemovedCode'], $shopkeyboard, 'HTML');
     step('home', $from_id);
 }
-if ($text == "⛓ زیر مجموعه ها") {
+if ($text == "👥 تنظیمات زیر مجموعه گیری") {
     sendmessage($from_id, $textbotlang['users']['selectoption'], $affiliates, 'HTML');
 } elseif ($text == "🎁 وضعیت زیرمجموعه گیری") {
     $affiliatesvalue = select("affiliates", "*", null, null, "select")['affiliatesstatus'];
