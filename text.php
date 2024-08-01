@@ -4,7 +4,11 @@ $textbotlang =[];
 $textbotlang['users']['channel']['link'] = "تنظیم نشده";
 $textbotlang['users']['channel']['text_join'] = "🔗 عضویت در کانال";
 $textbotlang['users']['channel']['confirmjoin'] = "✅ بررسی عضویت";
-$textbotlang['users']['channel']['confirmed'] = "عضویت شما با موفقیت تایید گردید با تشکر از شما❤️";
+$textbotlang['users']['channel']['confirmed'] = "به ربات هوشمند TommyVPN خوش آمدید.💚
+
+🚀 سرعت/🔰 امنیت/🌐 پایداری
+جهت آموزش خرید و استفاده از ربات دکمه [آموزش🎬] را کلیک کنید.👇🏻
+🚪 /start";
 $textbotlang['users']['channel']['notconfirmed'] = "❌ هنوز عضو کانال نشده اید.️";
 
 
