@@ -224,7 +224,7 @@ $shopkeyboard = json_encode([
 ]);
 $confrimrolls = json_encode([
     'keyboard' => [
-        [['text' => "✅ قوانین را می پذیرم"]],
+        [['text' => "✅ تایید موارد"]],
     ],
     'resize_keyboard' => true
 ]);
