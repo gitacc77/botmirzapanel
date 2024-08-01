@@ -99,6 +99,9 @@ Domain
  ```
  curl -o install.sh -L https://raw.githubusercontent.com/gitacc77/botmirzapanel/main/install.sh && bash install.sh
 ```
+ ```
+sudo apt-get --with-new-pkgs upgrade
+```
 
 # update bot
 
