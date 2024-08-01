@@ -240,7 +240,7 @@ if ($setting['roll_Status'] == "✅ تایید قانون روشن است" && $u
     sendmessage($from_id, $datatextbot['text_roll'], $confrimrolls, 'html');
     return;
 }
-if ($text == "تایید موارد ✅") {
+if ($text == "✅ تایید موارد") {
     sendmessage($from_id, $textbotlang['users']['Rules'], $keyboard, 'html');
     $confrim = true;
     update("user", "roll_Status", $confrim, "id", $from_id);
