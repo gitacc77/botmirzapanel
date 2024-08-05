@@ -487,7 +487,7 @@ $stmt = $pdo->prepare($sql);
 }
 $payment = json_encode([
     'inline_keyboard' => [
-        [['text' => "💰 پرداخت و دریافت سرویس", 'callback_data' => "confirmandgetservice"]],
+        [['text' => "💰 پرداخت و دریافت اشتراک", 'callback_data' => "confirmandgetservice"]],
         [['text' => "🎁 ثبت کد تخفیف", 'callback_data' => "aptdc"]],
         [['text' => "🏠 بازگشت به منوی اصلی" ,  'callback_data' => "backuser"]]
     ]
