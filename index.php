@@ -1598,7 +1598,7 @@ $link_config
 💰 سفارش شما آماده پرداخت است.  ";
     $paymentDiscount = json_encode([
         'inline_keyboard' => [
-            [['text' => "💰 پرداخت و دریافت سرویس", 'callback_data' => "confirmandgetserviceDiscount"]],
+            [['text' => "💰 پرداخت و دریافت اشتراک", 'callback_data' => "confirmandgetserviceDiscount"]],
             [['text' => "🏠 بازگشت به منوی اصلی", 'callback_data' => "backuser"]]
         ]
     ]);
